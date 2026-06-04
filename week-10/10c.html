@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest of Four Numbers</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+            background-color: orangered;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 150px;
+            background-color: whitesmoke;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Find Largest of Five Numbers</h2>
+
+<input type="number" id="1st" placeholder="Enter number 1"><br>
+<input type="number" id="2nd" placeholder="Enter number 2"><br>
+<input type="number" id="3rd" placeholder="Enter number 3"><br>
+<input type="number" id="4th" placeholder="Enter number 4"><br>
+
+<button onclick="findLargest()">Find Largest</button>
+
+<script>
+    function findLargest() {
+        let a = Number(document.getElementById("1st").value);
+        let b = Number(document.getElementById("2nd").value);
+        let c = Number(document.getElementById("3rd").value);
+        let d = Number(document.getElementById("4th").value);
+
+
+        let largest;
+
+        if (a >= b && a >= c && a >= d ) {
+            largest = a;
+        } 
+        else if (b >= a && b >= c && b >= d) {
+            largest = b;
+        } 
+        else if (c >= a && c >= b && c >= d) {
+            largest = c;
+        } 
+        
+        else {
+            largest = d;
+        }
+
+        alert("The largest number is: " + largest);
+    }
+</script>
+
+</body>
+</html>

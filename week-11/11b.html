@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+body{
+  font-family:Arial;
+  background:green;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+.box{
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+}
+input{
+  padding:10px;
+  width:220px;
+}
+button{
+  padding:10px 20px;
+  background:green;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Register</h2>
+  <input type="email" id="email" placeholder="Enter email">
+  <br><br>
+  <button onclick="checkEmail()">Register</button>
+</div>
+
+<script>
+function checkEmail(){
+  let email = document.getElementById("email").value;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if(!emailRegex.test(email))
+    alert("Please enter a valid email address.");
+  else
+    alert("Registration successful!");
+}
+</script>
+
+</body>
+</html>
